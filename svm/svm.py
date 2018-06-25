@@ -159,3 +159,5 @@ for NO_data in ['Salians']:
     plt.pcolor(iG)
     plt.savefig('result/decode_result_'+'_sample_num_'+'_'+str(k)+'_'+str(time)+'.png', format='png')
     plt.close()
+
+    print('end')
