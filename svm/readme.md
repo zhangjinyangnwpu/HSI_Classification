@@ -1,6 +1,7 @@
-## HIS data Classification by svm
+## HIS data Classification by svm classfier
 
-here, we illustriate some datasets and use svm for classification task.
+Here, we illustriate some datasets and use svm for classification task.
+For per category, we selected 200 samples randomly for training, and others for testing.
 
 ### result
 - Indian_pines
