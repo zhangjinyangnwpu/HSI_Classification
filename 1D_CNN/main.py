@@ -23,7 +23,7 @@ parser.add_argument('--fix_seed',dest='fix_seed',default=False)
 parser.add_argument('--seed',dest='seed',default=666)
 parser.add_argument('--decay_steps',dest='decay_steps',default=5000)
 parser.add_argument('--test_batch',dest='test_batch',default=5000)
-parser.add_argument('--epoch',dest='epoch',default=30001)
+parser.add_argument('--epoch',dest='epoch',default=50001)
 parser.add_argument('--save_decode_map',dest='save_decode_map',default=True)
 parser.add_argument('--load_model',dest='load_model',default=False)
 
