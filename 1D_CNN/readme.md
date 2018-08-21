@@ -1,6 +1,6 @@
 # 1D convolution network for HSI Classification
 #### You can try more iterate number for a better performence, here I just list a result I run. 
-For more detail, read code please, and any question, contact me with no hesitate.
+I choise 200 samples form per class, and take the other as test dataset. For more detail, read code please, and any question, contact me with no hesitate.
 
 - 30000 iteratation for **PaviaU** with batch size 200
 ```angular2html
