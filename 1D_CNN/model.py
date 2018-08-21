@@ -45,7 +45,7 @@ class Model():
             loss_cross_entropy = tf.reduce_mean(loss_cross_entropy)
             self.loss_total = loss_cross_entropy
             tf.summary.scalar('loss_total',self.loss_total)
-        self.optimizer = tf.train.AdamOptimizer(self.lr).minimize(self.loss_total)
+        self.optimizer = tf.train.AdamOptimizer(self.lr).minimize(self.loss_total,global_step=self.global_step)
         self.merged = tf.summary.merge_all()
 
 
