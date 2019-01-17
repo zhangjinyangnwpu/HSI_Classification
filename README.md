@@ -1,14 +1,18 @@
 # HSI_Classification
-Classification for Hyperspectral Imagery
+
+Hyperspectral Imagery Classification
 
 Here, I show some base and state-of-the-art methods for hyperspectral imagery classification.
+
 For detail, please read every readme file in the specificed methods.
 In this readme, I will give a brief description for every methods.
+
 -------------------------------
 ## Traditional machine learning based methods
 - Logical Regression
 - KNN
 - SVM
+
 -------------------------------
 ## Deep learning based methods
 - 1D-CNN
