@@ -1,28 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="59dbe4ce-d5b8-48a9-b754-3f448c4e9c0a" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/deployment.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/DCPN/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/knn.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/knn.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/K_nearest_neighbors/readme.md" beforeDir="false" afterPath="$PROJECT_DIR$/K_nearest_neighbors/readme.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/K_nearest_neighbors/result/decode_mapSalinas.png" beforeDir="false" afterPath="$PROJECT_DIR$/K_nearest_neighbors/result/decode_mapSalinas.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k_nearest_neighbors/knn.py" beforeDir="false" afterPath="$PROJECT_DIR$/k_nearest_neighbors/knn.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/k_nearest_neighbors/result/confusion_matrix1Inidan_pines.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/k_nearest_neighbors/result/confusion_matrix1PaviaU.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/k_nearest_neighbors/result/confusion_matrix1Salinas.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/k_nearest_neighbors/result/decode_resultInidan_pines.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/k_nearest_neighbors/result/decode_resultPaviaU.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/k_nearest_neighbors/result/decode_resultSalinas.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/k_nearest_neighbors/result/resultInidan_pines.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/k_nearest_neighbors/result/resultPaviaU.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/k_nearest_neighbors/result/resultSalinas.txt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/svm/result/decode_resultInidan_pines.png" beforeDir="false" afterPath="$PROJECT_DIR$/svm/result/decode_resultInidan_pines.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/svm/result/decode_resultPaviaU.png" beforeDir="false" afterPath="$PROJECT_DIR$/svm/result/decode_resultPaviaU.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/svm/result/decode_resultSalinas.png" beforeDir="false" afterPath="$PROJECT_DIR$/svm/result/decode_resultSalinas.png" afterDir="false" />
-    </list>
+    <list default="true" id="59dbe4ce-d5b8-48a9-b754-3f448c4e9c0a" name="Default" comment="" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -57,8 +36,8 @@
         <entry file="file://$PROJECT_DIR$/K_nearest_neighbors/readme.md">
           <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
             <state split_layout="SPLIT">
-              <first_editor relative-caret-position="263">
-                <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+              <first_editor relative-caret-position="600">
+                <caret line="18" column="16" lean-forward="true" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
               </first_editor>
               <second_editor />
             </state>
@@ -152,6 +131,12 @@
               <item name="HSI_Classification" type="b2602c69:ProjectViewProjectNode" />
               <item name="HSI_Classification" type="462c0819:PsiDirectoryNode" />
               <item name="K_nearest_neighbors" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="HSI_Classification" type="b2602c69:ProjectViewProjectNode" />
+              <item name="HSI_Classification" type="462c0819:PsiDirectoryNode" />
+              <item name="K_nearest_neighbors" type="462c0819:PsiDirectoryNode" />
+              <item name="result" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -434,7 +419,21 @@
       <option name="project" value="LOCAL" />
       <updated>1547691360332</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="readme change">
+      <created>1547693557473</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1547693557473</updated>
+    </task>
+    <task id="LOCAL-00019" summary="~">
+      <created>1547693709789</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1547693709789</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="ToolWindowManager">
@@ -444,11 +443,11 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Event Log" order="7" side_tool="true" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.3293348" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.3293348" />
       <window_info anchor="bottom" id="Version Control" order="7" />
       <window_info anchor="bottom" id="Python Console" order="7" />
       <window_info anchor="bottom" id="Terminal" order="7" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.141258" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.141258" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="right" id="Database" order="3" />
       <window_info anchor="right" id="SciView" order="3" />
@@ -479,7 +478,9 @@
     <MESSAGE value="2D CNN for HSI Classification" />
     <MESSAGE value="some notes" />
     <MESSAGE value="add methods" />
-    <option name="LAST_COMMIT_MESSAGE" value="add methods" />
+    <MESSAGE value="readme change" />
+    <MESSAGE value="~" />
+    <option name="LAST_COMMIT_MESSAGE" value="~" />
   </component>
   <component name="editorHistoryManager">
     <entry file="file://$PROJECT_DIR$/K_nearest_neighbors/knn.py">
@@ -805,8 +806,8 @@
     <entry file="file://$PROJECT_DIR$/K_nearest_neighbors/readme.md">
       <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
         <state split_layout="SPLIT">
-          <first_editor relative-caret-position="263">
-            <caret line="20" lean-forward="true" selection-start-line="20" selection-end-line="20" />
+          <first_editor relative-caret-position="600">
+            <caret line="18" column="16" lean-forward="true" selection-start-line="18" selection-start-column="16" selection-end-line="18" selection-end-column="16" />
           </first_editor>
           <second_editor />
         </state>
