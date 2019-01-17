@@ -5,11 +5,7 @@ import numpy as np
 import scipy.io as sio
 import random
 import matplotlib.pyplot as plt
-import seaborn as sn
-import pandas as pd
-import time
 import os
-from datetime import datetime
 path = os.path.join("E:\Code\RemoteDataProcessing\HSI_Classification\Data")# change this path for your dataset
 PaviaU = os.path.join(path,'PaviaU.mat')
 PaviaU_gt = os.path.join(path,'PaviaU_gt.mat')
