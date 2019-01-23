@@ -19,7 +19,7 @@ And the performance I may didn't find the best parameters, and her set the numbe
     - decode map
     ![decode_map](./result/decode_mapSalinas.png)
 
-training number 200 per class, neighbour k 5
+training number 200 per class
 
 |       | Indian Pines | PaviaU   | Salinas |
 |:-----:|:------------:|:--------:|:-------:|

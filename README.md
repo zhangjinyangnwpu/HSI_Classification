@@ -2,7 +2,7 @@
 
 Hyperspectral Imagery Classification
 
-Here, I show some base and state-of-the-art methods for hyperspectral imagery classification.
+Here, I show some basic and state-of-the-art methods for hyperspectral imagery classification.
 
 For detail, please read every readme file in the specificed methods.
 In this readme, I will give a brief description for every methods.

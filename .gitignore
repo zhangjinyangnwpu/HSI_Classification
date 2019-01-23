@@ -5,3 +5,5 @@
 *.mata
 *.data-*
 *.xml
+model.*
+checkpoint
