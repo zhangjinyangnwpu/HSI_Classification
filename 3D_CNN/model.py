@@ -21,9 +21,13 @@ class Model():
         self.model = args.model
         self.cube_size = args.cube_size
         self.data_path = args.data_path
-        self.epoch = args.epoch
+        self.iter_num = args.iter_num
         self.tfrecords = args.tfrecords
+        self.best_oa = 0
         self.global_step = tf.Variable(0,trainable=False)
+        self.training = tf.placeholder(bool)
+        self.train_feed = False
+        self.test_feed = False
         if args.use_lr_decay:
             self.lr = tf.train.exponential_decay(learning_rate=args.lr,
                                              global_step=self.global_step,
@@ -36,7 +40,7 @@ class Model():
         self.label = tf.placeholder(dtype=tf.int64, shape=(None, 1))
         self.classifer = self.classifer
 
-        self.pre_label = self.classifer(self.image)
+        self.pre_label = self.classifer(self.image,self.training)
         self.model_name = os.path.join('model.ckpt')
         self.loss()
         self.summary_write = tf.summary.FileWriter(os.path.join(self.log),graph=self.sess.graph)
@@ -52,24 +56,24 @@ class Model():
         self.merged = tf.summary.merge_all()
 
 
-    def classifer(self,feature):
+    def classifer(self,feature,training=False):
         f_num = 64
         feature = tf.expand_dims(feature,4)
         print(feature)
         with tf.variable_scope('classifer',reuse=tf.AUTO_REUSE):
             with tf.variable_scope('conv0'):
                 conv0 = tf.layers.conv3d(feature,f_num,(self.cube_size,1,8),strides=(1,1,3),padding='valid')
-                conv0 = tf.layers.batch_normalization(conv0)
+                conv0 = tf.layers.batch_normalization(conv0,training=training)
                 conv0 = tf.nn.relu(conv0)
                 print(conv0)
             with tf.variable_scope('conv1'):
                 conv1 = tf.layers.conv3d(conv0,f_num*2,(1,self.cube_size,3),strides=(1,1,2),padding='valid')
-                conv1 = tf.layers.batch_normalization(conv1)
+                conv1 = tf.layers.batch_normalization(conv1,training=training)
                 conv1 = tf.nn.relu(conv1)
                 print(conv1)
             with tf.variable_scope('conv2'):
                 conv2 = tf.layers.conv3d(conv1,f_num*4,(1,1,3),strides=(1,1,2),padding='valid')
-                conv2 = tf.layers.batch_normalization(conv2)
+                conv2 = tf.layers.batch_normalization(conv2,training=training)
                 conv2 = tf.nn.relu(conv2)
                 print(conv2)
                 shape = int(conv2.get_shape().as_list()[3])
@@ -99,17 +103,18 @@ class Model():
             print("Load fail!!!")
             exit(0)
 
-    def train(self,train_dataset,dataset):
+    def train(self,dataset):
+        train_dataset = dataset.data_parse(os.path.join(self.tfrecords, 'train_data.tfrecords'), type='train')
         init = tf.global_variables_initializer()
         self.best_oa = 0
         self.sess.run(init)
-        for i in range(self.epoch):
+        for i in range(self.iter_num):
             train_data,train_label = self.sess.run(train_dataset)
             # print(train_data.shape,train_label.shape)
-            l,_,summery,lr= self.sess.run([self.loss_total,self.optimizer,self.merged,self.lr],feed_dict={self.image:train_data,self.label:train_label})
+            l,_,summery,lr= self.sess.run([self.loss_total,self.optimizer,self.merged,self.lr],feed_dict={self.image:train_data,self.label:train_label,self.training:self.train_feed})
             if i % 1000 == 0:
                 print(i,'step:',l,'learning rate:',lr)
-            if i % 10000 == 0:
+            if i % 10000 == 0 and i!=0:
                 self.saver.save(self.sess,os.path.join(self.model,self.model_name),global_step=i)
                 print('saved...')
                 self.test(dataset)
@@ -123,7 +128,7 @@ class Model():
         try:
             while True:
                 test_data, test_label = self.sess.run(test_dataset)
-                pre_label = self.sess.run(self.pre_label, feed_dict={self.image:test_data,self.label:test_label})
+                pre_label = self.sess.run(self.pre_label, feed_dict={self.image:test_data,self.label:test_label,self.training:self.test_feed})
                 pre_label = np.argmax(pre_label,1)
                 pre_label = np.expand_dims(pre_label,1)
                 acc_num += np.sum((pre_label==test_label))
@@ -174,7 +179,7 @@ class Model():
         try:
             while True:
                 map_data,pos = self.sess.run(map_dataset)
-                pre_label = self.sess.run(self.pre_label, feed_dict={self.image:map_data})
+                pre_label = self.sess.run(self.pre_label, feed_dict={self.image:map_data,self.training:self.test_feed})
                 pre_label = np.argmax(pre_label,1)
                 for i in range(pre_label.shape[0]):
                     [r,c]=pos[i]
