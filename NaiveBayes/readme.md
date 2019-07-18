@@ -1,6 +1,6 @@
 ## HIS data Classification by NaiveBayes(朴素贝叶斯) classfier
 
-Here, I illustriate University of Pavia dataset and use knn for classification task.
+Here, I illustriate University of Pavia dataset and use naive bayes for classification task.
 For per category, we selected **100** samples randomly for training, and others for testing.
 
 I may didn't find the best parameters, and here set the penatly set as 'l2', and the solver set as 'newton-cg'(拟牛顿法的一种).

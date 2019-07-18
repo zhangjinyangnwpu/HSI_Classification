@@ -1,6 +1,6 @@
 ## HIS data Classification by SVM(支撑向量机) classfier
 
-Here, I illustriate University of Pavia dataset and use knn for classification task.
+Here, I illustriate University of Pavia dataset and use svm for classification task.
 For per category, we selected **100** samples randomly for training, and others for testing.
 
 I may didn't find the best parameters, and here set the kernel function as rbf, gamma is 1, and the penalize as 100 .

@@ -1,6 +1,6 @@
 ## HIS data Classification by DecisionTree(决策树) classfier
 
-Here, I illustriate University of Pavia dataset and use knn for classification task.
+Here, I illustriate University of Pavia dataset and use decision tree for classification task.
 For per category, we selected **100** samples randomly for training, and others for testing.
 
 I may didn't find the best parameters, and here set the criterion as gini and max_features as auto.
