@@ -9,19 +9,19 @@ In this readme, I will give a brief description for every methods.
 
 -------------------------------
 ## Traditional machine learning based methods
-- Logical Regression
-- KNN
-- SVM
+- Logical Regression (to be done)
+- KNN (to be done)
+- SVM (to be done)
 
 -------------------------------
 ## Deep learning based methods
-- 1D-CNN
-- 2D-CNN
-- 3D-CNN
-- DPPN(deep pixel pair network for Hyperspectral image classification)
-- DCPN(deep cube pair network for Hyperspectral image classification)
-- Residual Network
-- Dense Network
-- Recurrent Neural Network based methods
-- Discriminative Compact Representation Learning
-- Unsupervised Knowledge Learning
+- 1D-CNN (to be done)
+- 2D-CNN (to be done)
+- 3D-CNN (to be done)
+- DPPN(deep pixel pair network for Hyperspectral image classification) (to be done)
+- DCPN(deep cube pair network for Hyperspectral image classification) (to be done)
+- Residual Network (to be done)
+- Dense Network (to be done)
+- Recurrent Neural Network based methods (to be done)
+- Discriminative Compact Representation Learning (to be done)
+- Unsupervised Knowledge Learning (to be done)

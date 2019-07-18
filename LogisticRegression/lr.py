@@ -1,5 +1,7 @@
 # -*-coding=utf-8 -*-
 from sklearn.neighbors import KNeighborsClassifier
+from sklearn.svm import SVC
+from sklearn.linear_model import LogisticRegressionCV
 import numpy as np
 import scipy.io as sio
 import random
@@ -9,7 +11,7 @@ import os
 path = os.path.join("C:\JY\Dataset\HSI_Classification")# change this path for your dataset
 PaviaU = os.path.join(path,'PaviaU.mat')
 PaviaU_gt = os.path.join(path,'PaviaU_gt.mat')
-method_path = 'KNN'
+method_path = 'LogisticRegression'
 
 # 加载数据
 data = sio.loadmat(PaviaU)
@@ -25,8 +27,6 @@ deepth = im.shape[2]
 classes = np.max(imGIS)
 test_bg = False
 
-# 模型参数,neighbor k of knn
-neighuour_num = 5
 
 data_pos = {}
 train_pos = {}
@@ -71,7 +71,7 @@ for i in range(1,len(test_pos)+1):
 if not os.path.exists(os.path.join(method_path,'result')):
     os.makedirs(os.path.join(method_path,'result'))
 
-clf = KNeighborsClassifier(n_neighbors=neighuour_num)
+clf = LogisticRegressionCV(penalty='l2',solver='newton-cg')
 train = np.asarray(train)
 train_label = np.asarray(train_label)
 clf.fit(train,train_label)

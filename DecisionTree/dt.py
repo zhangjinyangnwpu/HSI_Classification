@@ -1,5 +1,7 @@
 # -*-coding=utf-8 -*-
 from sklearn.neighbors import KNeighborsClassifier
+from sklearn.svm import SVC
+from sklearn.tree import DecisionTreeClassifier
 import numpy as np
 import scipy.io as sio
 import random
@@ -9,7 +11,7 @@ import os
 path = os.path.join("C:\JY\Dataset\HSI_Classification")# change this path for your dataset
 PaviaU = os.path.join(path,'PaviaU.mat')
 PaviaU_gt = os.path.join(path,'PaviaU_gt.mat')
-method_path = 'KNN'
+method_path = 'DecisionTree'
 
 # 加载数据
 data = sio.loadmat(PaviaU)
@@ -71,7 +73,7 @@ for i in range(1,len(test_pos)+1):
 if not os.path.exists(os.path.join(method_path,'result')):
     os.makedirs(os.path.join(method_path,'result'))
 
-clf = KNeighborsClassifier(n_neighbors=neighuour_num)
+clf = DecisionTreeClassifier(criterion='gini',max_features='auto')
 train = np.asarray(train)
 train_label = np.asarray(train_label)
 clf.fit(train,train_label)
