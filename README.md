@@ -9,10 +9,10 @@ In this readme, I give a list for these methods.
 
 -------------------------------
 ## Traditional machine learning based methods
-- Logical Regression (to be done)
-- KNN (to be done)
-- SVM (to be done)
-- Naive Bayes (to be done)
+- Logical Regression
+- KNN
+- SVM
+- Naive Bayes
 
 -------------------------------
 ## Deep learning based methods

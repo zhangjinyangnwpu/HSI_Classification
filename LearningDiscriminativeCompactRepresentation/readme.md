@@ -33,3 +33,7 @@ Reaidual recovery map on PaviaU
 ![residual map](pic/residualmap.png)
 
 
+```
+L. Zhang, J. Zhang, W. Wei and Y. Zhang, "Learning Discriminative Compact Representation for Hyperspectral Imagery Classification," in IEEE Transactions on Geoscience and Remote Sensing.
+doi: 10.1109/TGRS.2019.2919938
+```
