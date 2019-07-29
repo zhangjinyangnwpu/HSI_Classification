@@ -24,5 +24,5 @@ In this readme, I give a list for these methods.
 - Residual Network (to be done)
 - Dense Network (to be done)
 - Recurrent Neural Network based methods (to be done)
-- Learning Discriminative Compact Representation for Hyperspectral Imagery Classification(TGRS2019) (to be done) [link](https://ieeexplore.ieee.org/document/8741172)
+- Learning Discriminative Compact Representation for Hyperspectral Imagery Classification(TGRS2019) [link](https://ieeexplore.ieee.org/document/8741172)
 - Improving Hyperspectral Image Classification With Unsupervised Learning(IGARSS2019) (to be done) 
