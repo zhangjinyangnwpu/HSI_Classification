@@ -1,36 +1,36 @@
 ## HIS data Classification by SVM(支撑向量机) classfier
 
 Here, I illustriate University of Pavia dataset and use svm for classification task.
-For per category, we selected **100** samples randomly for training, and others for testing.
+For per category, we selected **200** samples randomly for training, and others for testing.
 
 I may didn't find the best parameters, and here set the kernel function as rbf, gamma is 1, and the penalize as 100 .
 
 Once run result.
 ```
 ### result
-1 class: ( 5482.0 / 6531.0 ) 0.8393814117286786
-2 class: ( 16346.0 / 18549.0 ) 0.8812334896759934
-3 class: ( 1543.0 / 1999.0 ) 0.7718859429714857
-4 class: ( 2811.0 / 2964.0 ) 0.9483805668016194
-5 class: ( 1235.0 / 1245.0 ) 0.9919678714859438
-6 class: ( 4532.0 / 4929.0 ) 0.9194562791641306
-7 class: ( 1161.0 / 1230.0 ) 0.9439024390243902
-8 class: ( 2910.0 / 3582.0 ) 0.8123953098827471
-9 class: ( 846.0 / 847.0 ) 0.9988193624557261
+1 class: ( 5527.0 / 6431.0 ) 0.8594308816669258
+2 class: ( 17143.0 / 18449.0 ) 0.9292102552983902
+3 class: ( 1656.0 / 1899.0 ) 0.8720379146919431
+4 class: ( 2744.0 / 2864.0 ) 0.9581005586592178
+5 class: ( 1144.0 / 1145.0 ) 0.9991266375545852
+6 class: ( 4409.0 / 4829.0 ) 0.9130254711120315
+7 class: ( 1065.0 / 1130.0 ) 0.9424778761061947
+8 class: ( 2957.0 / 3482.0 ) 0.8492245835726594
+9 class: ( 745.0 / 747.0 ) 0.9973226238286479
 confusion matrix:
-[[ 5482     2   205     0     4     7    64    98     1]
- [   32 16346     6   136     1   317     0    15     0]
- [   66     6  1543     0     0     1     0   540     0]
- [    2   288     0  2811     0     3     0     0     0]
- [   25     0     0     1  1235     4     0     0     0]
- [   52  1894     3    16     1  4532     0    16     0]
- [  664     0     4     0     0     0  1161     3     0]
- [  208    13   238     0     4    65     5  2910     0]
- [    0     0     0     0     0     0     0     0   846]]
-total right num: 36866.0
-total test num: 41876.0
-Overall accuracy: 0.8803610660043939
-Average accuracy: 0.9008247414656351
-Kappa: 0.8434578905246909
-decode map get finished.
+[[ 5527     0    22     0     1     9    63    52     2]
+ [   14 17143    11    92     0   329     0     7     0]
+ [   98     0  1656     0     0     3     1   443     0]
+ [    0   243     0  2744     0     4     0     0     0]
+ [    4     0     0     9  1144     5     0     0     0]
+ [   35  1041     6    19     0  4409     0    20     0]
+ [  580     0     4     0     0     0  1065     3     0]
+ [  173    22   200     0     0    70     1  2957     0]
+ [    0     0     0     0     0     0     0     0   745]]
+total right num: 37390.0
+total test num: 40976.0
+Overall accuracy: 0.9124853572823116
+Average accuracy: 0.9244396447211773
+Kappa: 0.8836376165846425
+decode map get finished
 ```

@@ -6,7 +6,7 @@ import random
 import matplotlib.pyplot as plt
 import os
 
-path = os.path.join("C:\JY\Dataset\HSI_Classification")# change this path for your dataset
+path = os.path.join("C:\JY\Dataset\Hyperspectral-Image")# change this path for your dataset
 PaviaU = os.path.join(path,'PaviaU.mat')
 PaviaU_gt = os.path.join(path,'PaviaU_gt.mat')
 method_path = 'KNN'
@@ -20,7 +20,7 @@ imGIS = data_gt['paviaU_gt']# pair with your dataset
 im = (im - float(np.min(im)))
 im = im/np.max(im)
 
-sample_num = 100
+sample_num = 200
 deepth = im.shape[2]
 classes = np.max(imGIS)
 test_bg = False
@@ -104,7 +104,7 @@ ac_list = np.asarray(ac_list)
 aa = np.mean(ac_list)
 print('Average accuracy:',aa)
 print('Kappa:', kappa)
-sio.savemat(os.path.join(method_path,'result', 'result.mat'), {'oa': accuracy,'aa':aa,'kappa':kappa,'ac_list':ac_list,'matrix':matrix})
+sio.savemat(os.path.join('result', 'result.mat'), {'oa': accuracy,'aa':aa,'kappa':kappa,'ac_list':ac_list,'matrix':matrix})
 iG = np.zeros((imGIS.shape[0],imGIS.shape[1]))
 for i in range(imGIS.shape[0]):
     for j in range(imGIS.shape[1]):
@@ -117,9 +117,16 @@ for i in range(imGIS.shape[0]):
             iG[i,j] = (clf.predict(im[i,j].reshape(-1,len(im[i,j]))))
 if test_bg:
     iG[0,0] = 0
-plt.subplots_adjust(left=0, right=1, bottom=0, top=1, hspace=0, wspace=0)
+de_map = iG[::-1]
+fig, _ = plt.subplots()
+height, width = de_map.shape
+fig.set_size_inches(width/100.0, height/100.0)
+plt.gca().xaxis.set_major_locator(plt.NullLocator())
+plt.gca().yaxis.set_major_locator(plt.NullLocator())
+plt.subplots_adjust(top=1,bottom=0,left=0,right=1,hspace=0,wspace=0)
 plt.axis('off')
-plt.pcolor(iG, cmap='jet')
-plt.savefig(os.path.join(method_path,'result', 'decode_map'+str(int(test_bg))+'.png'), format='png')
+plt.axis('equal')
+plt.pcolor(de_map, cmap='jet')
+plt.savefig(os.path.join('result', 'decode_map.png'),format='png',dpi=600)#bbox_inches='tight',pad_inches=0)
 plt.close()
 print('decode map get finished')

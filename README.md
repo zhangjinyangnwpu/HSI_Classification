@@ -1,6 +1,6 @@
 # HSI_Classification
 
-Hyperspectral Imagery Classification
+Hyperspectral Imagery Classification is a pixel wise task, 
 
 Here, I show some traditional algorithms and deep learning methods for hyperspectral imagery classification.
 

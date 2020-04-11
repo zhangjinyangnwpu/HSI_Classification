@@ -1,7 +1,7 @@
 import os
 import scipy.io as sio
 import numpy as np
-times = 5
+times = 1
 class_num = 9
 path = 'result'
 oa_list = list()
