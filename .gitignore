@@ -8,5 +8,5 @@
 model.*
 checkpoint
 ^events.*
-.idea
-.vscode
+.idea/
+.vscode/
