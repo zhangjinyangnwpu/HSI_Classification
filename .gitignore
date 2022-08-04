@@ -5,7 +5,6 @@
 *.mata
 *.data-*
 *.xml
-model.*
 checkpoint
 ^events.*
 .idea/
