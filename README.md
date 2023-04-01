@@ -1,19 +1,15 @@
-# HSI_Classification
+# HSI Classification
 
-Hyperspectral Imagery Classification is a pixel wise task, 
+Classifying hyperspectral imagery is a pixel-wise task. In this repository, I present a collection of traditional algorithms and deep learning methods for hyperspectral imagery classification.
 
-Here, I show some traditional algorithms and deep learning methods for hyperspectral imagery classification.
-
-For detail, please read every readme file in the specificed methods.
-In this readme, I give a list for these methods.
-
+For detailed information on each method, please refer to the corresponding readme file.
 -------------------------------
-## Traditional machine learning based methods
-- KNN(K近邻)
-- SVM(支撑向量机)
 
--------------------------------
-## Deep learning based methods
-- 1D-CNN (一维卷积神经网络)
-- 2D-CNN (二维卷积神经网络)
-- 3D-CNN (三维卷积神经网络)
+## Traditional machine learning-based methods
+KNN (K-Nearest Neighbors)
+SVM (Support Vector Machine)
+
+## Deep learning-based methods
+1D-CNN (One-Dimensional Convolutional Neural Network)
+2D-CNN (Two-Dimensional Convolutional Neural Network)
+3D-CNN (Three-Dimensional Convolutional Neural Network)
