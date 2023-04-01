@@ -6,10 +6,10 @@ For detailed information on each method, please refer to the corresponding readm
 -------------------------------
 
 ## Traditional machine learning-based methods
-KNN (K-Nearest Neighbors)
-SVM (Support Vector Machine)
+- KNN (K-Nearest Neighbors)
+- SVM (Support Vector Machine)
 
 ## Deep learning-based methods
-1D-CNN (One-Dimensional Convolutional Neural Network)
-2D-CNN (Two-Dimensional Convolutional Neural Network)
-3D-CNN (Three-Dimensional Convolutional Neural Network)
+- 1D-CNN (One-Dimensional Convolutional Neural Network)
+- 2D-CNN (Two-Dimensional Convolutional Neural Network)
+- 3D-CNN (Three-Dimensional Convolutional Neural Network)
