@@ -3,6 +3,7 @@
 Classifying hyperspectral imagery is a pixel-wise task. In this repository, I present a collection of traditional algorithms and deep learning methods for hyperspectral imagery classification.
 
 For detailed information on each method, please refer to the corresponding readme file.
+
 -------------------------------
 
 ## Traditional machine learning-based methods
